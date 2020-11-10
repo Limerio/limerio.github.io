@@ -1,8 +1,1061 @@
 <html>
   <head>
-    <title>En construction</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <link rel="icon" href="/img/logos/logo_Seven.jpg" />
+    
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --color-purple: #8e52ff;
+  --color-purple-dark: #9939ff;
+  --color-gray: #7e7e7e;
+  --color-gray-dark: #343a40;
+  --color-dark: #343a40;
+  --color-dark-plus: #23272a;
+  --color-primary: #7289da;
+  --color-gray-clair: #ccc;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-dark-plus);
+  color: #fff;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+select {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #555;
+  border-radius: 15px;
+  box-shadow: inset 10px 10px 10px #cbced1, inset 10px 10px 10px #cbced1;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #555;
+  padding: 12px 3px 12px 2.5px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: inset 10px 10px 10px #cbced1, inset 10px 10px 10px #cbced1;
+}
+
+:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--color-dark-plus);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--color-purple);
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::selection {
+  background-color: var(--color-purple);
+  color: #fff;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.text__center {
+  text-align: center;
+}
+
+.text__uppercase {
+  text-transform: uppercase;
+}
+
+#blur.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.popup {
+  border-radius: 0.75rem;
+  border-style: none;
+  text-decoration: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+  background: var(--color-dark-plus);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.popup .popup-menu {
+  position: acolorolute;
+  margin-top: -32%;
+  margin-left: 35%;
+}
+
+.popup.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.header__menu__user {
+  border-radius: 0.75rem;
+  border-style: none;
+  text-decoration: none;
+  position: fixed;
+  top: 0;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  width: 11rem;
+  height: 11rem;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+  background: var(--color-dark-plus);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.header__menu__user.active {
+  top: 15%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.grade {
+  color: var(--color-primary);
+}
+
+.button {
+  color: #fff;
+  background: var(--color-dark);
+  width: 250px;
+  height: 50px;
+  border: none;
+  border-radius: 2rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+header {
+  background-image: url(/img/pre/img1.png);
+  background-size: cover;
+  object-fit: contain;
+  min-height: 100vh;
+}
+
+header nav.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10vh;
+  padding: 0.7rem 0;
+}
+
+header nav.navbar,
+#imgs {
+  transform: translateY(100%);
+}
+
+header nav.navbar ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav.navbar ul li {
+  margin: 0 0.5rem;
+}
+
+header .header__center {
+  margin-top: 60vh;
+}
+
+header .header__center ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header__center ul li {
+  margin: 0 1rem;
+}
+
+header .header__center ul li a button {
+  font-size: 1rem;
+  background-color: var(--color-purple);
+  transition: 0.5s ease-in-out;
+}
+
+header .header__center ul li:hover a button {
+  background-color: var(--color-purple-dark);
+  transition: 0.5s ease-in-out;
+}
+
+header.header {
+  background-image: none;
+  background-color: var(--color-dark-plus);
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  left: 0;
+  min-height: 0;
+}
+
+header.header .header__menu ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+header.header .navbar__icon {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+}
+
+header.header .navbar__icon .navbar__icon__burger {
+  margin-top: 4vh;
+  margin-right: 3vh;
+}
+
+header.header .navbar__icon .navbar__icon__burger svg {
+  display: none;
+}
+
+@media (min-width: 429px) {
+  header.header .navbar__icon .navbar__icon__burger svg {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  header.header .navbar__icon .navbar__icon__burger svg {
+    display: none;
+  }
+}
+
+header.header .header__menu ul li {
+  margin: 0 15px;
+}
+
+header.header .header__user {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+header.header .header__user p {
+  margin-right: 15px;
+}
+
+header.header .header__user a {
+  margin-top: -1.5vh;
+}
+
+header.header .header__user:hover .header__menu__user {
+  top: 25%;
+  right: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+header.header .header__user a svg.fa-ellipsis-v {
+  display: none;
+  opacity: 0;
+}
+
+header.header .header__user:hover svg.fa-ellipsis-v {
+  display: block;
+  opacity: 1;
+}
+
+img.avatar {
+  border-radius: 50%;
+}
+
+main {
+  margin: 5% 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 1;
+}
+
+/* section#functions:hover .list .list__col .card {
+  opacity: 0.2;
+}
+
+section#functions .list .list__col .card:hover {
+  opacity: 1;
+} */
+
+.main .main__sidebar {
+  flex: 0.2;
+  padding: 11px;
+}
+
+.main .main__content {
+  flex: 0.8;
+}
+
+.main .main__content#guild-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main .main__content#guild-list .card img {
+  margin-bottom: 8px;
+}
+
+.main .main__sidebar .main__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.main .main__content form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#functions .card {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px var(--color-dark), 5px 5px 5px rgba(0, 0, 0, 0.05),
+    -5px -5px 5px var(--color-dark);
+  border-radius: 15px;
+  margin: 30px;
+}
+
+section#functions .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  padding: 50px;
+  background: var(--color-dark);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 18px;
+  transition: 0.5s;
+}
+
+section#functions .card .box .card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+section#functions .card:hover {
+  transform: translateY(0);
+}
+
+section#functions .card:hover .box {
+  background: linear-gradient(42deg, #b95ce4, #4f29cc);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-50px);
+}
+
+section#functions .list .list__col .card:hover .box .card__image {
+  background-color: transparent;
+  opacity: 0.5;
+  transition: 1s;
+}
+
+section#functions .list .list__col .card .box .card__image {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  opacity: 0.03;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.card {
+  width: 350px;
+  height: 250px;
+  margin: 20px;
+  padding: 20px;
+  flex-direction: column;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c2f33;
+  transition: 0.5s;
+}
+
+.card.staff__card {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 100px;
+}
+
+.card:hover {
+  transform: translateY(-25px);
+}
+
+.card .card__body {
+  flex: 1;
+  align-items: center;
+}
+
+.card.staff__card .card__body {
+  padding: 1.5rem 1rem 3.5rem 1rem;
+}
+
+.card .card__body label {
+  margin-bottom: 3vh;
+}
+
+.card .card__body .card__text {
+  display: flex;
+  flex-wrap: wrap;
+  transition: 1s ease-in-out;
+}
+
+.card.staff__card .card__body .grade {
+  margin-top: 7px;
+}
+
+.card .card__body input {
+  width: 85%;
+  margin: 5px;
+}
+
+.card .card__body select {
+  width: 85%;
+  margin: 5px;
+}
+
+footer {
+  padding: 3vh 0 1vh 0;
+  background-color: var(--color-purple-dark);
+}
+
+footer .list .list__col:first-child {
+  margin-left: 2%;
+}
+
+footer .list .list__col:nth-child(2) ul,
+footer .list .list__col:nth-child(3) ul {
+  margin-left: 1%;
+}
+
+footer .list .list__col:first-child ul {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+footer .list .list__col:first-child ul li {
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+footer .list .list__col:first-child ul li a svg {
+  font-size: 1.5em;
+  transition: 0.5s;
+}
+
+footer .list .list__col:first-child ul li:nth-child(1) a svg {
+  color: #f00;
+  transition: 0.5s;
+}
+
+footer .list .list__col:first-child ul li:nth-child(2) a svg {
+  color: rgb(0, 204, 255);
+  transition: 0.5s;
+}
+
+footer .list .list__col:first-child ul li:nth-child(1):hover a svg {
+  color: rgb(167, 0, 0);
+  transition: 0.5s;
+}
+
+footer .list .list__col:first-child ul li:nth-child(2):hover a svg {
+  color: rgb(0, 109, 136);
+  transition: 0.5s;
+}
+
+footer .list .list__col h5 {
+  font-size: medium;
+}
+
+footer .footer-copyright {
+  text-align: center;
+  margin: 2% 0;
+}
+
+section {
+  border: none;
+}
+
+section#staff,
+section#functions {
+  color: var(--color-gray-clair);
+}
+
+section#staff,
+section#functions,
+section#stats {
+  opacity: 0;
+}
+
+section h1 {
+  color: var(--color-gray-clair);
+  font-size: 3rem;
+  margin: 3rem 0;
+  letter-spacing: 2px;
+}
+
+section#staff {
+  margin: 0;
+}
+
+section#staff h1 {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+section#staff h4 {
+  opacity: 0;
+  transform: translateX(-100%);
+  font-size: 2rem;
+  margin: 3rem 0 3rem 3rem;
+  color: var(--color-gray-clair);
+}
+
+section#staff .list .list__col {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.intro {
+  background: var(--color-dark-plus);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  background: var(--color-purple);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+.intro-text {
+  color: rgb(233, 233, 233);
+  font-family: "Heebo", sans-serif;
+  font-size: 3rem;
+}
+
+.hide {
+  background: var(--color-dark-plus);
+  overflow: hidden;
+}
+
+.hide .text {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section#staff .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+footer .list .list__col {
+  flex: 1;
+}
+
+.shape-divider {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  transition: 1s ease-in-out;
+}
+
+.shape-divider-footer {
+  display: none;
+  opacity: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  transition: 1s ease-in-out;
+}
+
+.shape-divider-footer .shape-fill {
+  fill: var(--color-purple-dark);
+}
+
+.shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 90px;
+}
+
+.shape-divider .shape-fill {
+  fill: var(--color-dark-plus);
+}
+
+#contact-seven {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#functions {
+  padding: 0 4rem;
+}
+
+section#functions h1 {
+  letter-spacing: 2px;
+}
+
+section#functions .list .list__col .card .card__body {
+  margin-top: 1rem;
+}
+
+section#functions .list .list__col .card .card__image {
+  padding: 0.5rem;
+  transition: 0.5s;
+}
+
+section#stats {
+  margin: 15px 0;
+}
+
+section#stats .list .list__col .card {
+  width: 250px;
+  height: 180px;
+}
+
+section#stats .list .list__col .card .stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+section#stats .list .list__col .card .stats .stats__name h1 {
+  font-size: 35px;
+  margin: 0;
+}
+
+section#stats .list .list__col .card .stats .stats__name {
+  margin: 20px 0;
+}
+
+section#stats .list .list__col .card .stats .stats__count {
+  font-size: 45px;
+  color: var(--color-purple);
+}
+
+    </style>
+
+    <script src="/js/all.js"></script>
+    <title>Seven Souls</title>
   </head>
-  <body>
-    <h1>En construction</h1>
-  </body>
+  <body id="top">
+    <header>
+      <nav class="navbar">
+        <a>
+          <img
+            src="/img/logos/logo_Seven.jpg"
+            class="rounded"
+            width="88"
+            height="88"
+          />
+        </a>
+        <ul>
+          <li id="home-link" style="cursor: pointer">Accueil</li>
+          <li id="functions-link" style="cursor: pointer">Fonctionalités</li>
+          <li id="staff-link" style="cursor: pointer">Équipe</li>
+        </ul>
+      </nav>
+
+      <nav class="header__center">
+        <ul>
+          <li>
+            <a href="/bot" target="_blank">
+              <button class="button">Invitez Seven Souls</button>
+            </a>
+          </li>
+          <li>
+            <a href="/support" target="_blank">
+              <button class="button">Rejoingnez nous</button>
+            </a>
+          </li>
+          <li>
+            <a href="<%= isAuth ? '/panel' : '/login' %>" target="_blank">
+              <button class="button">Dashboard</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+<div class="intro">
+  <div class="intro-text">
+    <div class="hide">
+      <a class="text">
+        <img src="/img/logos/logo_Seven.jpg" width="128" height="128" style="margin-bottom: 15px;" />
+      </a>
+    </div>
+    <h1 class="hide"> 
+      <span class="text">Seven Souls</span>
+    </h1>
+    <h1 class="hide">
+      <span class="text">Bot Multifonctions</span>
+    </h1>
+  </div>
+</div>
+<div class="slider"></div>
+
+<div class="shape-divider">
+  <svg
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1200 120"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+      opacity=".25"
+      class="shape-fill"
+    ></path>
+    <path
+      d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+      opacity=".5"
+      class="shape-fill"
+    ></path>
+    <path
+      d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+      class="shape-fill"
+    ></path>
+  </svg>
+</div>
+
+<main class="mt-5">
+  <section id="functions">
+    <h1 class="text__center">Fonctionnalités</h1>
+    <div class="list">
+      <div class="list__col">
+        <div class="card">
+          <div class="box">
+            <div class="card__image rounded">
+              <img src="/img/icons/lock-eyes.png" class="img-fluid mx-auto d-block" width="88" height="88" />
+            </div>
+            <div class="card__body text__center">
+              <h2 class="card__title">Anti Raid</h2>
+              <p class="card__text">
+                Modules configuratable: <br />
+                AutoDelete, Anti-everyone, Anti-Liens, Anti-Spam, Anti-SelfBot,
+                Blacklist, Mode Shield
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="list__col">
+        <div class="card">
+          <div class="box">
+            <div class="card__image rounded">
+              <img src="/img/icons/shield.png" width="88" height="88" />
+            </div>
+            <div class="card__body text__center">
+              <h2 class="card__title">Blacklist</h2>
+              <p class="card__text">
+                Une Blacklist de plus de 2000 utilisateurs configurable avec un
+                système de bypass, une commande de vérification de serveur et une
+                commande qui vérifie une personne donnée
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="list__col">
+        <div class="card">
+          <div class="box">
+            <div class="card__image rounded">
+              <img src="/img/icons/money.png" width="88" height="88" />
+            </div>
+            <div class="card__body text__center">
+              <h2 class="card__title">Economie / Level</h2>
+              <p class="card__text">Système de niveau, d'xp et de monnaie totalement configurable</p>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <div class="list">
+        <div class="list__col">
+          <div class="card">
+            <div class="box">
+              <div class="card__image rounded">
+                <img src="/img/icons/fun.png" class="img-fluid mx-auto d-block" width="88" height="88" />
+              </div>
+              <div class="card__body text__center">
+                <h2 class="card__title">Fun</h2>
+                <p class="card__text">
+                  Jouer en Role Play avec tout le monde et gagner des boxs qui peut
+                  vous faire gagner gros !
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="list__col">
+          <div class="card">
+            <div class="box">
+              <div class="card__image rounded">
+                <img src="/img/icons/18-plus.png" width="88" height="88" />
+              </div>
+              <div class="card__body text__center">
+                <h2 class="card__title">NSFW</h2>
+                <p class="card__text">Des commandes plus ou moins osées permettant de vous divertir d'une façon différente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="list__col">
+          <div class="card">
+            <div class="box">
+              <div class="card__image rounded">
+                <img src="/img/icons/settings.png" class="img-fluid mx-auto d-block" width="88" height="88" />
+              </div>
+              <div class="card__body text__center">
+                <h2 class="card__title">Utilitaires</h2>
+                <p class="card__text">
+                  Configurer votre serveur avec un système de bienvenue/au revoir,
+                  de suggestion et bien d'autres !
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h1 class="text__center">Statistiques</h1>
+    <div class="list">
+      <div class="list__col">
+        <div class="card">
+          <div class="stats">
+            <div class="stats__name">
+              <h1 class="text__center">Serveurs</h1>
+            </div>
+            <div class="stats__count">
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list__col">
+        <div class="card">
+          <div class="stats">
+            <div class="stats__name">
+              <h1 class="text__center">Utilisateurs</h1>
+            </div>
+            <div class="stats__count">
+              <span>0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list__col">
+        <div class="card">
+          <div class="stats">
+            <div class="stats__name">
+              <h1 class="text__center">Blacklist</h1>
+            </div>
+            <div class="stats__count">
+              <span><%= blacklistSize %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list__col">
+        <div class="card">
+          <div class="stats">
+            <div class="stats__name">
+              <h1 class="text__center">Staff</h1>
+            </div>
+            <div class="stats__count">
+              <span><%= fondateur.length + administrateur.length + responsable.length + coresponsable.length + supermoderation.length + moderation.length + assistant.length + ar.length + marketing.length %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+</main>
+
+        <div class="shape-divider-footer">
+            <svg data-name="footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"
+                    ></path>
+            </svg>
+        </div>
+        <footer>
+                <div class="list">
+                    <div class="list__col">
+                        <select>
+                            <option value="fr-FR">Français</option>
+                            <option value="en-EN">English</option>
+                        </select>
+                        <ul>
+                            <li><a href="/youtube" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                            <li><a href="/twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="list__col">
+                        <h5 class="text-uppercase">Liens</h5>
+                        
+                        <ul>
+                            <li><a href="/bot" target="_blank">Invitation du bot</a></li>
+                            <li><a href="/support" target="_blank">Lien du support</a></li>
+                            <li><a href="/vote" target="_blank">Vote</a></li>
+                            <li><a href="/serveurofficiel" target="_blank">Serveur officiel</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="list__col">
+                        <h5 class="text-uppercase">Contact</h5>
+                
+                        <ul>
+                            <li id="contact-seven"><img src="/img/logos/Discord-Logo-White.png" class="img-fluid" width="22" height="22">! Seven Souls !#6308</li>
+                            <li>📩 contact.sevensouls@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-copyright text-center" style="margin-bottom: 2%">
+                    &copy; 2020 Copyright - Tous Droits Réservés              
+                </div>
+        </footer>
+
+        <script src="/js/gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/TextPlugin.min.js"></script>
+        <script src="/js/anime.js"></script>
+        <script src="/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    </body>
 </html>
